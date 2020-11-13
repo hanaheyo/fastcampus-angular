@@ -11,4 +11,8 @@ export class AppComponent {
   click = () => {
     this.title = '자식으로부터 실행됨';
   }
+
+  myEvent() {
+    this.title = '자식에서 발생한 이벤트에 의해 실행됨.'
+  }
 }

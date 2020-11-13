@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
     selector: 'app-sample1',
@@ -17,4 +17,12 @@ import { Component, Input } from '@angular/core';
 export class Sample1Component {
     @Input() text;
     @Input() click;
+
+    @Output() myEvent = new EventEmitter();
+
+    ngOnInit() {
+        setTimeout(() => {
+            this.myEvent.emit();
+        }, 2000);
+    }
 }
