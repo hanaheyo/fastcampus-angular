@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angualr-basic-component';
+
+  click = () => {
+    this.title = '자식으로부터 실행됨';
+  }
 }
