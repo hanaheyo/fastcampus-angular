@@ -1,0 +1,12 @@
+<div class="content" role="main">
+    <h2>{{ title }} app is running!</h2>
+    <app-sample1></app-sample1>
+    <app-sample1 
+      text="자식에게 내려줄 값" 
+      [click]="click"
+      (myEvent)="myEvent()"
+    ></app-sample1>
+    <app-sample2></app-sample2>
+    <app-sample3></app-sample3>
+    <app-sample4></app-sample4>
+</div>
