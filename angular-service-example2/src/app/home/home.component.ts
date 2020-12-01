@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { LogService } from '../log.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  providers: [LogService]
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private log: LogService
+  ) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.log.info('Home');
   }
 
 }
