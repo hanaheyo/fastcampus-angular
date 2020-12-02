@@ -15,7 +15,7 @@ export class BookDetailComponent implements OnInit {
     // this.bookId = this.route.snapshot.paramMap.get('id');
     this.route.paramMap.subscribe(data => {
       this.bookId = data.get('id');
-    })
+    });
   }
 
 }
